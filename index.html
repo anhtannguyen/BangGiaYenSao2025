@@ -3,38 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng giá Yến Sào Hiển Minh</title>
-    <style>
-        /* CSS cơ bản để tạo kiểu dáng cho bảng */
-        table {
-            width: 90%; /* Chiều rộng bảng là 90% màn hình */
-            border-collapse: collapse; /* Gộp đường viền của các ô */
-            margin: 20px auto; /* Căn giữa bảng và tạo khoảng cách */
-        }
-
-        th, td {
-            border: 1px solid #ddd; /* Đường viền cho các ô */
-            padding: 8px; /* Khoảng cách nội dung và đường viền */
-            text-align: left; /* Căn trái nội dung */
-        }
-
-        th {
-            background-color: #f2f2f2; /* Màu nền cho tiêu đề bảng */
-        }
-
-        img {
-            max-width: 100%; /* Hình ảnh vừa với ô */
-            height: auto;
-        }
-    </style>
+    <title>Bảng giá Yến Sào Hiền Minh</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h2>Bảng giá Sỉ Công ty TNHH Yến Sào Hiển Minh</h2>
-    <p>Nha Trang - Khánh Hòa</p>
-    <p>(Đại lý)</p>
-    <p>(Nguyên chất 100%)</p>
-
+    <div class="title-container">       
+        <h2 class="title-container__heading" style="text-transform: uppercase;">Bảng giá Sỉ Công ty TNHH Yến Sào Hiền Minh</h2>
+        <p style="font-size: 2rem;">Nha Trang - Khánh Hòa</p>
+        <p style="font-size: 2rem;">(Đại lý)</p>
+        <p style="font-size: 2rem;">(Nguyên chất 100%)</p>
+    </div>
     <table>
         <thead>
             <tr>
@@ -194,10 +172,13 @@
                 <td>Yến vụn baby</td>
                 <td>100 Gram</td>
                 <td>1.600.000</td>
+
             </tr>
 
         </tbody>
-    </table>
 
+    </table>
+    <script src="script.js"></script>
 </body>
 </html>
+
