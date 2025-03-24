@@ -1,0 +1,54 @@
+
+        body{
+            margin: 0; /* Loại bỏ lề mặc định */
+            padding: 0; /* Loại bỏ khoảng đệm mặc định */
+            font-family: Arial, sans-serif; /* Phông chữ mặc định */
+            background-color: #bdbd82; /* Màu nền */
+            color: #333; /* Màu chữ mặc định */
+            font-size: 20px; /* Kích thước phông chữ mặc định */
+            line-height: 1.5; /* Chiều cao dòng mặc định */
+        }
+        body a {
+            color: #007bff; /* Màu liên kết */
+            text-decoration: none; /* Loại bỏ gạch chân mặc định */
+            }
+
+            body a:hover {
+            text-decoration: underline; /* Gạch chân khi di chuột qua */
+        }
+        body ul, body ol {
+            list-style: none; /* Loại bỏ dấu chấm/số mặc định */
+            padding: 0;
+            margin: 0;
+        }
+        /* CSS cơ bản để tạo kiểu dáng cho bảng */
+        table {
+            width: 90%; /* Chiều rộng bảng là 90% màn hình */
+            border-collapse: collapse; /* Gộp đường viền của các ô */
+            margin: 20px auto; /* Căn giữa bảng và tạo khoảng cách */
+        }
+
+        th, td {
+            border: 3px solid #000000; /* Đường viền cho các ô */
+            padding: 5px; /* Khoảng cách nội dung và đường viền */
+            text-align: center; /* Căn trái nội dung */
+        }
+
+        th {
+            background-color: #ffffff; /* Màu nền cho tiêu đề bảng */
+        }
+
+        img {
+            max-width: 100%; /* Hình ảnh vừa với ô */
+            height: auto;
+        }
+        .title-container{ /*Thêm CSS cho div bao quanh tiêu đề*/
+            text-align: center; 
+            margin-bottom: 20px; /* thêm khoảng cách với bang*/
+        }
+        .title-container__heading{
+            font-size: 3rem; /* Tăng kích thước chữ */
+            font-family: 'Times New Roman', serif; /* Chọn phông chữ nghệ thuật */
+            text-transform: uppercase; /* Viết hoa tất cả chữ */
+            color: #000080; /* Màu chữ xanh đậm*/
+        }
