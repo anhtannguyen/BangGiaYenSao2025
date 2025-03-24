@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng giá Yến Sào Hiển Minh</title>
-    <style>
+    <title>Bảng giá Yến Sào Hiền Minh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style> 
+    body{
+            margin: 0; /* Loại bỏ lề mặc định */
+            padding: 0; /* Loại bỏ khoảng đệm mặc định */
+            font-family: Arial, sans-serif; /* Phông chữ mặc định */
+            background-color: #bdbd82; /* Màu nền */
+            color: #333; /* Màu chữ mặc định */
+            font-size: 20px; /* Kích thước phông chữ mặc định */
+            line-height: 1.5; /* Chiều cao dòng mặc định */
+        }
+        body a {
+            color: #007bff; /* Màu liên kết */
+            text-decoration: none; /* Loại bỏ gạch chân mặc định */
+            }
+
+            body a:hover {
+            text-decoration: underline; /* Gạch chân khi di chuột qua */
+        }
+        body ul, body ol {
+            list-style: none; /* Loại bỏ dấu chấm/số mặc định */
+            padding: 0;
+            margin: 0;
+        }
         /* CSS cơ bản để tạo kiểu dáng cho bảng */
         table {
             width: 90%; /* Chiều rộng bảng là 90% màn hình */
@@ -13,28 +37,37 @@
         }
 
         th, td {
-            border: 1px solid #ddd; /* Đường viền cho các ô */
-            padding: 8px; /* Khoảng cách nội dung và đường viền */
-            text-align: left; /* Căn trái nội dung */
+            border: 3px solid #000000; /* Đường viền cho các ô */
+            padding: 5px; /* Khoảng cách nội dung và đường viền */
+            text-align: center; /* Căn trái nội dung */
         }
 
         th {
-            background-color: #f2f2f2; /* Màu nền cho tiêu đề bảng */
+            background-color: #ffffff; /* Màu nền cho tiêu đề bảng */
         }
 
         img {
             max-width: 100%; /* Hình ảnh vừa với ô */
             height: auto;
         }
-    </style>
-</head>
+        .title-container{ /*Thêm CSS cho div bao quanh tiêu đề*/
+            text-align: center; 
+            margin-bottom: 20px; /* thêm khoảng cách với bang*/
+        }
+        .title-container__heading{
+            font-size: 3rem; /* Tăng kích thước chữ */
+            font-family: 'Times New Roman', serif; /* Chọn phông chữ nghệ thuật */
+            text-transform: uppercase; /* Viết hoa tất cả chữ */
+            color: #000080; /* Màu chữ xanh đậm*/
+        }
+</style>    
 <body>
-
-    <h2>Bảng giá Sỉ Công ty TNHH Yến Sào Hiển Minh</h2>
-    <p>Nha Trang - Khánh Hòa</p>
-    <p>(Đại lý)</p>
-    <p>(Nguyên chất 100%)</p>
-
+    <div class="title-container">       
+        <h2 class="title-container__heading" style="text-transform: uppercase;">Bảng giá Sỉ Công ty TNHH Yến Sào Hiền Minh</h2>
+        <p style="font-size: 2rem;">Nha Trang - Khánh Hòa</p>
+        <p style="font-size: 2rem;">(Đại lý)</p>
+        <p style="font-size: 2rem;">(Nguyên chất 100%)</p>
+    </div>
     <table>
         <thead>
             <tr>
@@ -194,10 +227,12 @@
                 <td>Yến vụn baby</td>
                 <td>100 Gram</td>
                 <td>1.600.000</td>
+
             </tr>
 
         </tbody>
-    </table>
 
+    </table>
+    <script src="script.js"></script>
 </body>
 </html>
