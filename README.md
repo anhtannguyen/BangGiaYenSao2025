@@ -4,69 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng giá Yến Sào Hiền Minh</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <style> 
     body{
-            margin: 0; /* Loại bỏ lề mặc định */
-            padding: 0; /* Loại bỏ khoảng đệm mặc định */
-            font-family: Arial, sans-serif; /* Phông chữ mặc định */
-            background-color: #bdbd82; /* Màu nền */
-            color: #333; /* Màu chữ mặc định */
-            font-size: 20px; /* Kích thước phông chữ mặc định */
-            line-height: 1.5; /* Chiều cao dòng mặc định */
-        }
-        body a {
-            color: #007bff; /* Màu liên kết */
-            text-decoration: none; /* Loại bỏ gạch chân mặc định */
-            }
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #bdbd82;
+        color: #333;
+        font-size: 20px;
+        line-height: 1.5;
+        box-sizing:content-box;
+    }
+    body a {
+        color: #007bff;
+        text-decoration: none;
+    }
 
-            body a:hover {
-            text-decoration: underline; /* Gạch chân khi di chuột qua */
-        }
-        body ul, body ol {
-            list-style: none; /* Loại bỏ dấu chấm/số mặc định */
-            padding: 0;
-            margin: 0;
-        }
-        /* CSS cơ bản để tạo kiểu dáng cho bảng */
-        table {
-            width: 90%; /* Chiều rộng bảng là 90% màn hình */
-            border-collapse: collapse; /* Gộp đường viền của các ô */
-            margin: 20px auto; /* Căn giữa bảng và tạo khoảng cách */
-        }
+    body a:hover {
+        text-decoration: underline;
+    }
+    body ul, body ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+    }
 
-        th, td {
-            border: 3px solid #000000; /* Đường viền cho các ô */
-            padding: 5px; /* Khoảng cách nội dung và đường viền */
-            text-align: center; /* Căn trái nội dung */
-        }
-
-        th {
-            background-color: #ffffff; /* Màu nền cho tiêu đề bảng */
-        }
-
-        img {
-            max-width: 100%; /* Hình ảnh vừa với ô */
-            height: auto;
-        }
-        .title-container{ /*Thêm CSS cho div bao quanh tiêu đề*/
-            text-align: center; 
-            margin-bottom: 20px; /* thêm khoảng cách với bang*/
-        }
-        .title-container__heading{
-            font-size: 3rem; /* Tăng kích thước chữ */
-            font-family: 'Times New Roman', serif; /* Chọn phông chữ nghệ thuật */
-            text-transform: uppercase; /* Viết hoa tất cả chữ */
-            color: #000080; /* Màu chữ xanh đậm*/
-        }
-</style>    
+    th, td {
+        border: 3px solid #000000;
+        padding: 5px;
+        text-align: center;
+    }
+    th {
+        background-color: #ffffff;
+        font-size: 1.4em;
+        font-weight: bolder;
+        color: rgba(68, 173, 173,1);
+    }
+    td {
+        text-decoration:double;
+        font-size: 1.2em;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .title-container{
+        text-align: center; 
+        margin-bottom: 20px;
+        position: sticky;
+        top: 0;
+        background-color: #bdbd82;
+    }
+    .title-container__heading{
+        font-size: 4rem;
+        font-family: 'Times New Roman', serif;
+        text-transform: uppercase;
+        color: #000080;
+        line-height:1.2;
+        letter-spacing: 0px;
+    }
+    .title-container p{
+        line-height: 0.5 ;
+        letter-spacing:-0;
+        text-transform: uppercase;
+        transition: opacity 0.5s ease; /* Thêm hiệu ứng chuyển đổi */
+    }
+    .title-container p.hidden {
+        opacity: 0; /* Ẩn các đoạn văn bản khi có lớp hidden */
+    }
+    thead {
+        position: sticky;
+        top: 220px;
+        background-color: #ffffff;
+        z-index: 99;
+    }
+    .company-info {
+        background-color:#182537;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex; /* Sử dụng Flexbox */
+        justify-content: space-around; /* Căn đều các phần tử */
+        flex-wrap: wrap;
+    }
+    .company-info a {
+        width: 25%;
+        color: white;
+        box-sizing: border-box;
+    }
+</style>
 <body>
-    <div class="title-container">       
-        <h2 class="title-container__heading" style="text-transform: uppercase;">Bảng giá Sỉ Công ty TNHH Yến Sào Hiền Minh</h2>
-        <p style="font-size: 2rem;">Nha Trang - Khánh Hòa</p>
-        <p style="font-size: 2rem;">(Đại lý)</p>
-        <p style="font-size: 2rem;">(Nguyên chất 100%)</p>
+    <div class="title-container">         
+        <h2 class="title-container__heading" style="text-transform: uppercase;padding-top:10px;">Bảng giá Sỉ Công ty TNHH Yến Sào Hiền Minh</h2>
+        <p id="nha-trang" style="font-size: 2.5rem;">Nha Trang - Khánh Hòa</p>
+        <p id="dai-ly" style="font-size: 2.5rem;">(Đại lý)</p>
+        <p id="nguyen-chat" style="font-size: 2.5rem;">(Nguyên chất 100%)</p>
     </div>
     <table>
         <thead>
@@ -233,6 +272,25 @@
         </tbody>
 
     </table>
-    <script src="script.js"></script>
+    <div class="company-info">
+        <p>Facebook: <a href="https://www.facebook.com/Yensaochuyensinhatrang/">Yến Sào chuyên sỉ Nha Trang</a></p>
+        <p>Facebook: <a href="https://maps.app.goo.gl/vkXBmL4MgVtzyyJL8">71 A Phòng Không, Phước Long, Nha Trang, Vietnam</a></p>
+        <p>Điện thoại: 0981 294 979 | Zalo: <a href="https://zalo.me/0981294979">0981 294 979</a></p>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 10) {
+                document.getElementById("nha-trang").classList.add("hidden");
+                document.getElementById("dai-ly").classList.add("hidden");
+                document.getElementById("nguyen-chat").classList.add("hidden");
+            } else {
+                document.getElementById("nha-trang").classList.remove("hidden");
+                document.getElementById("dai-ly").classList.remove("hidden");
+                document.getElementById("nguyen-chat").classList.remove("hidden");
+            }
+        }
+    </script>
 </body>
 </html>
